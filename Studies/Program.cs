@@ -58,8 +58,25 @@ namespace Studies
         }
         public int CountElements(int[] arr)
         {
-
-            return 0;
+            var arry = new List<int>();
+            int x = 0;
+            foreach(int ss in arr)
+            {
+                x = ss+1;
+                if (arr.Contains(x))
+                {
+                    arry.Add(ss);
+                }
+            }
+            int count =arry.Count();
+            Console.WriteLine("The total count is "+count);
+            Console.Write("The Elements are: ");
+            foreach(int v in arry)
+            {
+                Console.Write(v + ", ");
+            }
+            Console.WriteLine("");
+            return count;
         }
     }
     class Program
@@ -67,20 +84,21 @@ namespace Studies
        
         static void Main(string[] args)
         {
-            Solution solution = new Solution();
-            char[] space = new char[] { ' ' };
-            string[] ops = Console.ReadLine().Split(space);
-            int output = solution.CalPoints(ops);
-            Console.Write(output.ToString());
-            Console.WriteLine(output);
-            Console.WriteLine(output);
-
-            //The Second Example
             //Solution solution = new Solution();
             //char[] space = new char[] { ' ' };
-            //string input = Console.ReadLine().Split(space);
-            //int[] arr = input.ToList().Select(int.Parse).ToArray();
-            //int output = solution.CountElements(arr);
+            //string[] ops = Console.ReadLine().Split(space);
+            //int output = solution.CalPoints(ops);
+            //Console.Write(output.ToString());
+            //Console.WriteLine(output);
+            //Console.WriteLine(output);
+
+            //The Second Example
+            Solution solution = new Solution();
+            char[] space = new char[] { ' ' };
+            string[] input = Console.ReadLine().Split(space);
+            int[] arr = input.ToList().Select(int.Parse).ToArray();
+            int output = solution.CountElements(arr);
+            Console.WriteLine(output);
         }
     }
 }
