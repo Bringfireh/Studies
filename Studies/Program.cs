@@ -19,14 +19,14 @@ namespace Studies
                     int xn = arry.Count();
                     arry.Add( (2 * arry[xn - 1]));
                     //previous = arry[xn];
-                    Console.WriteLine(arry);
+                    //Console.WriteLine(arry.ToList());
                 }
                 else if (bet == "+")
                 {
                     int xn = arry.Count();
                     arry.Add((arry[xn - 2] + arry[xn - 1]));
                     //previous = arry[xn];
-                    Console.WriteLine(arry);
+                    //Console.WriteLine(arry.ToList());
                 }
                 else if (bet=="C")
                 {
@@ -38,13 +38,13 @@ namespace Studies
                     }
                     arry = ay;
                     //previous = 0;
-                    Console.WriteLine(arry);
+                    Console.WriteLine(arry.ToList());
                 }
                 else if (int.TryParse(bet, out newnum )==true)
                 {
                     int xn = arry.Count();
                     arry.Add(newnum);
-                    Console.WriteLine(arry);
+                    Console.WriteLine(arry.ToList());
                     //previous = newnum;
                 }
             }
